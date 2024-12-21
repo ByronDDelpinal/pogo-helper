@@ -16,8 +16,6 @@ const eslintConfig = [
       '@typescript-eslint/prefer-as-const': 'off',
     },
   })
-  
-
 ];
 
 export default eslintConfig;

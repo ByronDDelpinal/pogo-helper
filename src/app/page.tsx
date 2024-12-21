@@ -8,6 +8,7 @@ import { QueryBuilder } from './components/QueryBuilder/QueryBuilder'
 import { QueryBuilderResult } from './components/QueryBuilder/QueryBuilderResult'
 import SecondaryHeading from './components/SecondaryHeading'
 import { SelectedQueryOptionsProvider } from './contexts/SelectedQueryOptionsContext'
+import { CollapsibleSection } from './components/CollapsibleSection'
 
 export default function Home() {
   const mainContainerStyle = {
@@ -62,7 +63,7 @@ export default function Home() {
               interactions while trading or raiding with friends.
             </li>
             <li>
-              <b>Always filter interactable friends out.</b> If you have already
+              <b>Filter interactable friends out.</b> If you have already
               interacted with a friend that day, do not open their gift. Only
               send them a gift if you`&apos;`ve exhausted all
               non-interacted-with friends.
@@ -86,30 +87,41 @@ export default function Home() {
           </p>
           <CopyTextSection stringToCopy='!interactable&!friendlevel4' />
 
-          <p>
-            Step Two: Friends you have interacted with yet that are not best
-            friends.
-          </p>
-          <CopyTextSection stringToCopy='interactable&!friendlevel4' />
+          <CollapsibleSection additionalButtonText='About Sending Gifts' collapsed={true}>
+            <p>
+              Step Two: Friends you have interacted with yet that are not best
+              friends.
+            </p>
+            <CopyTextSection stringToCopy='interactable&!friendlevel4' />
 
-          <p>
-            Step Three: Non-lucky best friends you have not interacted with.
-          </p>
-          <CopyTextSection stringToCopy='!lucky&!interactable&friendlevel4' />
+            <p>
+              Step Three: Non-lucky best friends you have not interacted with.
+            </p>
+            <CopyTextSection stringToCopy='!lucky&!interactable&friendlevel4' />
 
-          <p>Step Three: Non-lucky best friends you have interacted with.</p>
-          <CopyTextSection stringToCopy='!lucky&interactable&friendlevel4' />
+            <p>Step Three: Non-lucky best friends you have interacted with.</p>
+            <CopyTextSection stringToCopy='!lucky&interactable&friendlevel4' />
+          </CollapsibleSection>
 
           {/* -------- FRIENDSHIP Query Builder --------*/}
           <SecondaryHeading text='Build Your Own Query'></SecondaryHeading>
+          <p>
+            Tap on the buttons below to add them to your own search query! Tap
+            once to add them, and click them again to negate them (lucky {'->'}{' '}
+            !lucky). Currently this only supports `&quot;`and`&quot;` queries,
+            so you can have `&quot;`interactable&!lucky`&quot;`, but not
+            `&quot;`interactable,!lucky`&quot;`.
+          </p>
           <QueryBuilder />
           <QueryBuilderResult />
 
           {/* -------- POKEMON QUERIES --------*/}
           <MainHeading text='Pokemon Queries'></MainHeading>
+          <p>Coming Soon!</p>
 
           {/* -------- RESOURCES --------*/}
           <MainHeading text='Resources'></MainHeading>
+          <p>Coming Soon!</p>
         </main>
 
         {/* -------- FOOTER --------*/}
