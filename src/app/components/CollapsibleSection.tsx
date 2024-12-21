@@ -14,9 +14,9 @@ export const CollapsibleSection: React.FC<CollapsibleProps> = ({
   const [isCollapsed, setIsCollapsed] = React.useState(collapsed)
 
   const collapsibleButtonStyle = {
-    background: 'var(--action-low)',
+    background: 'var(--primary)',
     borderRadius: '5px',
-    color: 'var(--primary)',
+    color: 'var(--action-low)',
     margin: 'var(--spacing-m) auto',
     padding: 'var(--spacing-m) var(--spacing-m)',
     maxWidth: '75vw'
