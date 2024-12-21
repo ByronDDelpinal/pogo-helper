@@ -1,10 +1,16 @@
 export default function Navigation() {
-    const navigationItemStyle = {
-        listStyleType: 'none',
-      }
+  const navigationItemStyle = {
+    listStyleType: 'none',
+  }
+
+  const navigationStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: '20px',
+  }
 
   return (
-    <ul className='flex'>
+    <ul style={navigationStyle}>
       <li className='mr-3' style={navigationItemStyle}>
         <a
           className='inline-block bg-[--action-high] border border-[--action-high] text-[--primary] rounded py-1 px-3'
@@ -23,10 +29,10 @@ export default function Navigation() {
       </li>
       <li className='mr-3' style={navigationItemStyle}>
         <a
-          className='inline-block py-1 px-3 text-gray-400 cursor-not-allowed'
-          href='#'
+          className='inline-block rounded text-[--action-high] hover:border-[--tertiary] hover:bg-[--action-high] hover:text-[--primary] py-1 px-3'
+          href='#resources'
         >
-          Disabled Pill
+          Resources
         </a>
       </li>
     </ul>

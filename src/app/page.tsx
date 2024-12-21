@@ -10,9 +10,15 @@ import SecondaryHeading from './components/SecondaryHeading'
 import { SelectedQueryOptionsProvider } from './contexts/SelectedQueryOptionsContext'
 
 export default function Home() {
+  const mainContainerStyle = {
+    display: 'flex',
+    flexDirection: 'column' as 'column',
+    margin: 'var(--spacing-m)',
+  }
+
   return (
     <SelectedQueryOptionsProvider>
-      <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
+      <div style={mainContainerStyle}>
         {/* -------- NAVIGATION --------*/}
         <Navigation />
 
@@ -38,10 +44,11 @@ export default function Home() {
             will maximize your ability to do so. To learn more about how
             friendship works, please visit{' '}
             <a href='https://pokemongo.fandom.com/wiki/Friends'>
-              the "friends" page of the Pokemon Go Fandom Wiki.
+              the `&quot;`friends`&quot;` page of the Pokemon Go Fandom Wiki.
             </a>
-            . In this section, I'll go over how I maximize gifting in Pokemon Go
-            and provide a quick way for you to do the same. A few tips:
+            . In this section, I`&apos;`ll go over how I maximize gifting in
+            Pokemon Go and provide a quick way for you to do the same. A few
+            tips:
           </p>
           <ul>
             <li>
@@ -57,8 +64,8 @@ export default function Home() {
             <li>
               <b>Always filter interactable friends out.</b> If you have already
               interacted with a friend that day, do not open their gift. Only
-              send them a gift if you've exhausted all non-interacted-with
-              friends.
+              send them a gift if you`&apos;`ve exhausted all
+              non-interacted-with friends.
             </li>
             <li>
               <b>Send best friend gifts last.</b> Making lucky friends is great
@@ -74,8 +81,8 @@ export default function Home() {
 
           <SecondaryHeading text='Sending Gifts'></SecondaryHeading>
           <p>
-            Step One: Friends you haven't interacted with yet that are not best
-            friends.
+            Step One: Friends you haven`&apos;`t interacted with yet that are
+            not best friends.
           </p>
           <CopyTextSection stringToCopy='!interactable&!friendlevel4' />
 
@@ -100,6 +107,9 @@ export default function Home() {
 
           {/* -------- POKEMON QUERIES --------*/}
           <MainHeading text='Pokemon Queries'></MainHeading>
+
+          {/* -------- RESOURCES --------*/}
+          <MainHeading text='Resources'></MainHeading>
         </main>
 
         {/* -------- FOOTER --------*/}

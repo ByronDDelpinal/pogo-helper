@@ -3,7 +3,7 @@ import { useSelectedQueryOptions } from '../../contexts/SelectedQueryOptionsCont
 interface QueryOptionProps {
   option: {
     id: string
-    selectionState: 0 | 1 | 2
+    selectionState: number
     displayText: string
     negatedText: string
   }
@@ -21,18 +21,6 @@ export const QueryOption: React.FC<QueryOptionProps> = ({ option }) => {
         return option.negatedText
       default:
         return 'Not Selected'
-    }
-  }
-
-  const getBackgroundColor = () => {
-    switch (option.selectionState) {
-      case 0:
-        return 'var(--primary)'
-      case 1:
-      case 2:
-        return 'var(--action-low)'
-      default:
-        return 'var(--primary)'
     }
   }
 

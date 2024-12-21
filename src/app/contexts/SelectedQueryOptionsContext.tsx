@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react'
 // Define the shape of a query option
 interface QueryOption {
   id: string
-  selectionState: 0 | 1 | 2 // 0 = unselected, 1 = positive selection, 2 = negative selection
+  selectionState: number // 0 = unselected, 1 = positive selection, 2 = negative selection
   displayText: string
   negatedText: string
 }
@@ -12,6 +12,7 @@ interface QueryOption {
 interface SelectedQueryOptionsContextType {
   selectedOptions: QueryOption[]
   toggleOption: (optionId: string) => void
+  unselectAllOptions: () => void
 }
 
 // Create the context with default values
@@ -94,9 +95,19 @@ export const SelectedQueryOptionsProvider: React.FC<
     )
   }
 
+  const unselectAllOptions = () => {
+    setSelectedOptions((prevOptions) =>
+      prevOptions.map((option) =>
+        option.selectionState !== 0
+          ? { ...option, selectionState: 0 } // Cycle through 0, 1, 2
+          : option
+      )
+    )
+  }
+
   return (
     <SelectedQueryOptionsContext.Provider
-      value={{ selectedOptions, toggleOption }}
+      value={{ selectedOptions, toggleOption, unselectAllOptions }}
     >
       {children}
     </SelectedQueryOptionsContext.Provider>

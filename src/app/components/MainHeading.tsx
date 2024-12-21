@@ -4,7 +4,6 @@ export function MainHeading({ text }: { text: string }) {
         color: 'var(--secondary)',
         lineHeight: '1.5em',
         padding: 'var(--spacing-m) 0',
-        textAlign: 'left',
       };
 
     return (
