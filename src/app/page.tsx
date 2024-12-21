@@ -47,7 +47,7 @@ export default function Home() {
             <a href='https://pokemongo.fandom.com/wiki/Friends'>
               the &quot;friends&quot; page of the Pokemon Go Fandom Wiki.
             </a>
-            . In this section, I`&apos;`ll go over how I maximize gifting in
+            . In this section, I&apos;ll go over how I maximize gifting in
             Pokemon Go and provide a quick way for you to do the same. A few
             tips:
           </p>
@@ -65,7 +65,7 @@ export default function Home() {
             <li>
               <b>Filter interactable friends out.</b> If you have already
               interacted with a friend that day, do not open their gift. Only
-              send them a gift if you`&apos;`ve exhausted all
+              send them a gift if you&apos;ve exhausted all
               non-interacted-with friends.
             </li>
             <li>
@@ -108,9 +108,9 @@ export default function Home() {
           <p>
             Tap on the buttons below to add them to your own search query! Tap
             once to add them, and click them again to negate them (lucky {'->'}{' '}
-            !lucky). Currently this only supports `&quot;`and`&quot;` queries,
-            so you can have `&quot;`interactable&!lucky`&quot;`, but not
-            `&quot;`interactable,!lucky`&quot;`.
+            !lucky). Currently this only supports &quot;and&quot; queries,
+            so you can have &quot;interactable&!lucky&quot;, but not
+            &quot;interactable,!lucky&quot;.
           </p>
           <QueryBuilder />
           <QueryBuilderResult />
