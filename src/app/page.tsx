@@ -45,7 +45,7 @@ export default function Home() {
             will maximize your ability to do so. To learn more about how
             friendship works, please visit{' '}
             <a href='https://pokemongo.fandom.com/wiki/Friends'>
-              the `&quot;`friends`&quot;` page of the Pokemon Go Fandom Wiki.
+              the &quot;friends&quot; page of the Pokemon Go Fandom Wiki.
             </a>
             . In this section, I`&apos;`ll go over how I maximize gifting in
             Pokemon Go and provide a quick way for you to do the same. A few
@@ -82,25 +82,25 @@ export default function Home() {
 
           <SecondaryHeading text='Sending Gifts'></SecondaryHeading>
           <p>
-            Step One: Friends you haven`&apos;`t interacted with yet that are
+            Step One: Friends you haven&apos;t interacted with yet that are
             not best friends.
           </p>
-          <CopyTextSection stringToCopy='!interactable&!friendlevel4' />
+          <CopyTextSection stringToCopy='giftable&interactable&!friendlevel4' />
 
           <CollapsibleSection additionalButtonText='About Sending Gifts' collapsed={true}>
             <p>
               Step Two: Friends you have interacted with yet that are not best
               friends.
             </p>
-            <CopyTextSection stringToCopy='interactable&!friendlevel4' />
+            <CopyTextSection stringToCopy='giftable&!interactable&!friendlevel4' />
 
             <p>
               Step Three: Non-lucky best friends you have not interacted with.
             </p>
-            <CopyTextSection stringToCopy='!lucky&!interactable&friendlevel4' />
+            <CopyTextSection stringToCopy='giftable&!lucky&interactable&friendlevel4' />
 
             <p>Step Three: Non-lucky best friends you have interacted with.</p>
-            <CopyTextSection stringToCopy='!lucky&interactable&friendlevel4' />
+            <CopyTextSection stringToCopy='giftable&!lucky&!interactable&friendlevel4' />
           </CollapsibleSection>
 
           {/* -------- FRIENDSHIP Query Builder --------*/}
