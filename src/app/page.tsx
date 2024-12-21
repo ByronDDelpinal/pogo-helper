@@ -31,7 +31,7 @@ export default function Home() {
             pokemon search queries. Using these queries can provide a lot of
             efficiency to how you manage your pokemon storage and friends. A lof
             of the pre-made queries are subjective. Please{' '}
-            <a href='mailto:byron.delpinal@gmail.com'>
+            <a href='mailto:byronddelpinal@gmail.com'>
               send an email to fiss1on (Byron)
             </a>{' '}
             with any feedback. Thanks!
